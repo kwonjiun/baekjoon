@@ -10,10 +10,9 @@ num = 0
 answer = []
 for i in range(len(people)):
     num = (num + k - 1)%len(people)
-    print(people[num])
-    answer.append(str(people.pop(num)))
-
-
+    answer.append(str(people[num]))
+    del people[num]
+    
 print("<", ", ".join(answer), ">", sep = "")
     
     
