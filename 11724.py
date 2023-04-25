@@ -1,7 +1,7 @@
 import sys
 
 input = sys.stdin.readline
-
+sys.setrecursionlimit(5000)
 N, M = map(int,input().split())
 
 relation = [[] for _ in range(N+1)]
@@ -31,5 +31,5 @@ for i in range(1,N+1):
         else:
             dfs(i)
             answer += 1
-            
+
 print(answer)
